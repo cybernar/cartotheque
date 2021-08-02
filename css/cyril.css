@@ -1,14 +1,96 @@
-/* malpolon.css */
-
-html {
-  font-size: 62.5%; }
+/* cyril.css */
 
 body {
+  color: #FFF;
+  background-color: #333; 
+}
+
+header {
+  /*background-color: #123613;*/
+}
+
+.entete {
+  margin: 20px 0;
+  background-color: #697566;
+  color: #333;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.entete h1 {
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;  
+  font-weight: 400;
+  font-size: 2.4rem; line-height: 1.2; 
+}
+
+
+.entete a {
+  color: #DDD;
+  font-weight: 300;
+  text-decoration: overline;
+  padding-right: 10px;
+}
+
+.entete a:hover {
+  color:  #B6E0A3
+}
+
+.titre {
+  margin: 40px 0;  
+  color: #B6E0A3;
+}
+
+.element {
+  text-decoration: none;
+  padding-right: 10px;
+  color: #697566;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.4rem; line-height: 1.2; 
+  margin: 40px 0;  
+  color: #B6E0A3;
+}
+
+h3 {
+  color: #697566;
+  font-weight: 600;
+  font-size: 1.8rem; line-height: 1.2; 
+  margin-top: 20px;  
+  border-bottom: solid thin;
+}
+
+.button {
+  text-transform: none;
+  color: #B6E0A3;
+  font-weight: 400;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
 
 }
 
+.button:hover {
+  color: #878877;
+}
+
+
+
+
+/* 
+
+html {
+  font-size: 80%; }
+
+
+.sidebar {
+  padding-top: 25px;
+  background: url("../images/subtle_dots.png");
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
 .sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4 {
- font-weight: 600;
+ font-weight: 400;
 }
 
 .content h1, .content h2, .content h3, .content h4 {
@@ -19,7 +101,12 @@ h2 { font-size: 1.8rem; line-height: 1.25; letter-spacing: -.1rem; }
 h3 { font-size: 1.5rem; line-height: 1.3;  letter-spacing: -.1rem; }
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 
+*/
+
 /* Larger than phablet */
+
+
+/*
 @media (min-width: 550px) {
   h1 { font-size: 3.0rem; }
   h2 { font-size: 2.4rem; }
@@ -45,12 +132,6 @@ code {
 
 .avatar img {
   border-radius: 50%;
-}
-
-.sidebar {
-	padding-top: 25px;
-	font-weight: 600;
-  background: url("../images/subtle_dots.png");
 }
 
 .sidebar hr {
@@ -83,7 +164,7 @@ ul.menu {
 ul.menu a {
   text-decoration: none;
 }
-
+*/
 
 
 
