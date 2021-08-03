@@ -61,6 +61,13 @@ h3 {
   border-bottom: solid thin;
 }
 
+h4 {
+  color: #697566;
+  font-weight: 600;
+  font-size: 1.8rem; line-height: 1.2; 
+  margin-top: 20px;  
+}
+
 .button {
   text-transform: none;
   color: #B6E0A3;
