@@ -43,6 +43,10 @@ header {
   color: #B6E0A3;
 }
 
+.rounded {
+  border-radius: 50%;
+}
+
 /*
 .titre {
   margin: 40px 0;  
