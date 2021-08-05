@@ -35,10 +35,20 @@ header {
   color:  #B6E0A3
 }
 
+.espace40 {
+  margin: 40px 0;  
+}
+
+.coul_bril {
+  color: #B6E0A3;
+}
+
+/*
 .titre {
   margin: 40px 0;  
   color: #B6E0A3;
 }
+*/
 
 .element {
   text-decoration: none;
