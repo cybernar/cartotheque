@@ -30,7 +30,6 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
           <xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer"/>
         </p>
 
-        <p>++ test date ++</p>
         <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date"/>
 
         <p>Auteurs 
@@ -43,12 +42,22 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
           <xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString"/>
         </p>
         
+        <h3>Aperçu</h3>
+        <img>
+          <xsl:attribute name="src">
+            <xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview[1]/gmd:MD_BrowseGraphic/gmd:fileName/gco:CharacterString"/>
+          </xsl:attribute>
+        </img>
+
         <h3>Mots clés</h3>
         <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords"/>
         
         <h3>Etendue</h3>
         
         <h3>Accès au téléchargement</h3>
+        <xsl:apply-templates select="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine"/>
+        <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[1]/gmd:CI_ResponsibleParty"/>
+        <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints"/>
 
       </body>
     </html>
@@ -86,6 +95,38 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
   <!-- Template MOT CLE -->
   <xsl:template match="gmd:keyword">
     <span><xsl:value-of select="gco:CharacterString" /></span>
+  </xsl:template>
+
+  <!-- Template LIEN -->
+
+  <xsl:template match="gmd:onLine">
+    <span class="attr">Lien <xsl:value-of select="position()" /></span>
+    <xsl:value-of select="gmd:CI_OnlineResource/gmd:description/gco:CharacterString" />
+    <a>
+      <xsl:attribute name="href">
+        <xsl:value-of select="gmd:CI_OnlineResource/gmd:linkage/gmd:URL" />
+      </xsl:attribute>
+      <xsl:value-of select="gmd:CI_OnlineResource/gmd:linkage/gmd:URL" />
+    </a>
+  </xsl:template>
+
+  <!-- Template EMAIL RESPONSABLE -->
+
+  <xsl:template match="gmd:CI_ResponsibleParty">
+    <p>
+      <span class="attr">Contact pour la ressource</span>
+      <xsl:value-of select="gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString" />
+    </p>
+  </xsl:template>
+
+  <!-- Template CONDITIONS UTILISATION -->
+  <xsl:template match="gmd:resourceConstraints">
+    <p><span class="attr">Condition d'utilisation</span>
+      <xsl:choose>
+        <xsl:when test="gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/@codeListValue='intellectualPropertyRights'">droits de propriété intectuelle</xsl:when>
+        <xsl:otherwise>autres</xsl:otherwise>
+      </xsl:choose>
+    </p>
   </xsl:template>
 
 </xsl:stylesheet>
