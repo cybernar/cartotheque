@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://www.isotc211.org/2005/gmd/gmd.xsd http://www.isotc211.org/2005/gmx http://www.isotc211.org/2005/gmx/gmx.xsd http://www.isotc211.org/2005/srv http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd">
   <gmd:fileIdentifier>
-    <gco:CharacterString>5649bcd6-2bef-4f94-a9c7-52acd33e4732</gco:CharacterString>
+    <gco:CharacterString>94b51771-432c-4bb6-8d13-80519148fc8f</gco:CharacterString>
   </gmd:fileIdentifier>
-  <gmd:parentIdentifier>
-    <gco:CharacterString>d74fe99a-aeb8-4005-b3b9-9b824397105f</gco:CharacterString>
-  </gmd:parentIdentifier>
   <gmd:language>
     <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="fre"/>
   </gmd:language>
@@ -65,7 +62,7 @@
       <gmd:referenceSystemIdentifier>
         <gmd:RS_Identifier>
           <gmd:code>
-            <gco:CharacterString>Voirol 1879 / Nord Algerie (ancienne) (EPSG:30493)</gco:CharacterString>
+            <gco:CharacterString>NTF (Paris) / Lambert Sud France (EPSG:27563)</gco:CharacterString>
           </gmd:code>
         </gmd:RS_Identifier>
       </gmd:referenceSystemIdentifier>
@@ -76,22 +73,12 @@
       <gmd:citation>
         <gmd:CI_Citation>
           <gmd:title>
-            <gco:CharacterString>Carte phyto-écologique de la Tunisie septentrionale - Feuille II / Bizerte - Tunis</gco:CharacterString>
+            <gco:CharacterString>Saint-Martin-de-Londres - Carte de la répartition des différentes associations des formes chimiques de Thymus Vulgaris</gco:CharacterString>
           </gmd:title>
           <gmd:date>
             <gmd:CI_Date>
               <gmd:date>
-                <gco:Date>1965-01-01</gco:Date>
-              </gmd:date>
-              <gmd:dateType>
-                <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation"/>
-              </gmd:dateType>
-            </gmd:CI_Date>
-          </gmd:date>
-          <gmd:date>
-            <gmd:CI_Date>
-              <gmd:date>
-                <gco:Date>1967-01-01</gco:Date>
+                <gco:Date>1977-01-01</gco:Date>
               </gmd:date>
               <gmd:dateType>
                 <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"/>
@@ -101,7 +88,7 @@
           <gmd:identifier>
             <gmd:MD_Identifier>
               <gmd:code>
-                <gco:CharacterString>CEFE-CARTO-3442</gco:CharacterString>
+                <gco:CharacterString>CEFE-CARTO-3419</gco:CharacterString>
               </gmd:code>
             </gmd:MD_Identifier>
           </gmd:identifier>
@@ -109,15 +96,15 @@
             <gmd:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_PresentationFormCode" codeListValue="mapDigital"/>
           </gmd:presentationForm>
           <gmd:otherCitationDetails>
-            <gco:CharacterString>Gouvernement Tunisien - Secrétariat d'Etat au Plan et à l'Economie Nationale - Centre d'Etudes Phytosociologiques et Ecologiques (CEPE), Montpellier - Centre National de la Recherche Scientifique (CNRS), Paris. Dressée sous la direction scientifique de M. Gounot, maître de conférence à l'Université de Tunis et A. Schoenberger, Maître de Recherche de l'ORSTOM. C. Floret, Docteur en Ecologie, Ingénieur Ecologiste au CEPE étant Directeur Technique. Carte établie d'après photographies aériennes par le personnel de la Société Géotechnip, mis en place auprès de la Mission Phyto-Ecologique du CNRS / CEPE en Tunisie, Ch Rossetti étant coordinateur technique. Photo-interprétateurs : Responsable D.C. Schwaar, assité de R. Barthélémy, M. Haywood et S. Clayeux. Editée par le CNRS / CEPE à la demande de l'I.S.E.A.N pour le compte du Secrétariat d'Etat au Plan et à l'Economie Nationale - M. T HAOUET étant Ingénieur en Chef, Directeur des Divisions du Développement Agricole et de la Production Agricole - M. A Ben Salah étant Secrétaire d'Etat au Plan et à l'Economie Nationale.</gco:CharacterString>
+            <gco:CharacterString>voir travaux sur le Thym Bibliothèque du CEFE</gco:CharacterString>
           </gmd:otherCitationDetails>
         </gmd:CI_Citation>
       </gmd:citation>
       <gmd:abstract>
-        <gco:CharacterString>Carte Phyto-Ecologique de la Tunisie Septentrionale. Feuille II : Bizerte - Tunis. Les groupements sont classés par étages de végétation méditerranéens. La carte principale est assortie d'un carton bioclimatique, un carton pluviométrique et des vents, un carton de la végétation primitive, un carton géologique, un carton pédologique.</gco:CharacterString>
+        <gco:CharacterString>Répartition des différentes associations des chémotypes de Thymus Vulgaris dans le bassin de Saint-Martin-de-Londres. Le thym doit ses propriétés aromatiques et médicinales à l'essence contenue dans les poils glandulaires répartis sur toute la surface épidermique des parties aériennes de la plante. Cette essence présente une remarquable variabilité. Parmi les nombreux composés que l'on peut y mettre en évidence, il en existe 6 qui, dans les populations méditerranéennes françaises, jouent un rôle particulier : en effet, une plante admet l'un de ces composés comme constituant majoritaire. Il en résulte que, selon le composé monotopénique majoritaire accumulé dans les poils glandulaires, la plupart des plantes peuvent être classées, sans ambiguïté, dans l'une ou l'autre de 6 catégories, fréquement appelées chémotypes (chémotypes T, C, L, U, A, G). La présence majoritaire de chacun de ces 6 composés est contrôlée par un gêne - parfois deux - (sûrement de type régulatif). La caractérisation chémotypique des populations de thym est basée ici sur l'association des deux chémotypes les plus abondants. L'étude de la zone cartographiée révèle que les mêmes gênes se rencontrent dans les populations chaque fois que les mêmes conditions (d'humidité ou de température, suivant les gènes) sont réalisées.</gco:CharacterString>
       </gmd:abstract>
       <gmd:credit>
-        <gco:CharacterString>Dressée par A. Bigot, C. Floret, J.L. Guillerm, J.C. Jacquinet et A. Soler sous la direction scientifique de M. Gounot et A. Schoenberger.</gco:CharacterString>
+        <gco:CharacterString>Vernet P., Guillerm J.-L., Gouyon P. H.</gco:CharacterString>
       </gmd:credit>
       <gmd:pointOfContact>
         <gmd:CI_ResponsibleParty>
@@ -143,7 +130,7 @@
       <gmd:graphicOverview>
         <gmd:MD_BrowseGraphic>
           <gmd:fileName>
-            <gco:CharacterString>https://cartotheque.cefe.cnrs.fr/datastore/public/JPG/3442_t.jpg</gco:CharacterString>
+            <gco:CharacterString>https://cartotheque.cefe.cnrs.fr/datastore/public/JPG/3419_t.jpg</gco:CharacterString>
           </gmd:fileName>
           <gmd:fileDescription>
             <gco:CharacterString>Aperçu de la carte</gco:CharacterString>
@@ -156,25 +143,16 @@
       <gmd:descriptiveKeywords>
         <gmd:MD_Keywords>
           <gmd:keyword>
-            <gco:CharacterString>Afrique du Nord</gco:CharacterString>
-          </gmd:keyword>
-          <gmd:keyword>
-            <gco:CharacterString>climat méditerranéen</gco:CharacterString>
-          </gmd:keyword>
-          <gmd:keyword>
             <gco:CharacterString>communauté végétale</gco:CharacterString>
           </gmd:keyword>
           <gmd:keyword>
-            <gco:CharacterString>couverture végétale</gco:CharacterString>
+            <gco:CharacterString>population végétale</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>zone méditerranéenne</gco:CharacterString>
           </gmd:keyword>
           <gmd:keyword>
             <gco:CharacterString>écologie végétale</gco:CharacterString>
-          </gmd:keyword>
-          <gmd:keyword>
-            <gco:CharacterString>sol</gco:CharacterString>
-          </gmd:keyword>
-          <gmd:keyword>
-            <gco:CharacterString>type de végétation</gco:CharacterString>
           </gmd:keyword>
           <gmd:thesaurusName>
             <gmd:CI_Citation>
@@ -224,9 +202,6 @@
           <gmd:keyword>
             <gco:CharacterString>Centre d'Etudes Phytosociologiques et Ecologiques</gco:CharacterString>
           </gmd:keyword>
-          <gmd:keyword>
-            <gco:CharacterString>Tunisie</gco:CharacterString>
-          </gmd:keyword>
         </gmd:MD_Keywords>
       </gmd:descriptiveKeywords>
       <gmd:resourceConstraints>
@@ -244,7 +219,7 @@
           <gmd:equivalentScale>
             <gmd:MD_RepresentativeFraction>
               <gmd:denominator>
-                <gco:Integer>200000</gco:Integer>
+                <gco:Integer>25000</gco:Integer>
               </gmd:denominator>
             </gmd:MD_RepresentativeFraction>
           </gmd:equivalentScale>
@@ -261,16 +236,16 @@
           <gmd:geographicElement>
             <gmd:EX_GeographicBoundingBox>
               <gmd:westBoundLongitude>
-                <gco:Decimal>9.13</gco:Decimal>
+                <gco:Decimal>3.694</gco:Decimal>
               </gmd:westBoundLongitude>
               <gmd:eastBoundLongitude>
-                <gco:Decimal>10.285</gco:Decimal>
+                <gco:Decimal>3.839</gco:Decimal>
               </gmd:eastBoundLongitude>
               <gmd:southBoundLatitude>
-                <gco:Decimal>36.30</gco:Decimal>
+                <gco:Decimal>43.764</gco:Decimal>
               </gmd:southBoundLatitude>
               <gmd:northBoundLatitude>
-                <gco:Decimal>37.455</gco:Decimal>
+                <gco:Decimal>43.852</gco:Decimal>
               </gmd:northBoundLatitude>
             </gmd:EX_GeographicBoundingBox>
           </gmd:geographicElement>
@@ -305,32 +280,32 @@
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>https://cartotheque.cefe.cnrs.fr/datastore/restreint/JPG/3442_medres.jpg</gmd:URL>
+                <gmd:URL>https://cartotheque.cefe.cnrs.fr/datastore/restreint/JPG/3419_medres.jpg</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
               </gmd:protocol>
               <gmd:name>
-                <gmx:MimeFileType type="image/jpeg">3442_medres.jpg</gmx:MimeFileType>
+                <gmx:MimeFileType type="image/jpeg">3419_medres.jpg</gmx:MimeFileType>
               </gmd:name>
               <gmd:description>
-                <gco:CharacterString>JPEG 150 dpi (7.5 Mo)</gco:CharacterString>
+                <gco:CharacterString>JPEG 150 dpi (2.7 Mo)</gco:CharacterString>
               </gmd:description>
             </gmd:CI_OnlineResource>
           </gmd:onLine>
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>https://cartotheque.cefe.cnrs.fr/datastore/restreint/TIF/3442_hires.tif</gmd:URL>
+                <gmd:URL>https://cartotheque.cefe.cnrs.fr/datastore/restreint/TIF/3419_hires.tif</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
               </gmd:protocol>
               <gmd:name>
-                <gmx:MimeFileType type="image/tiff">3442_hires.tif</gmx:MimeFileType>
+                <gmx:MimeFileType type="image/tiff">3419_hires.tif</gmx:MimeFileType>
               </gmd:name>
               <gmd:description>
-                <gco:CharacterString>TIFF 300 dpi (126 Mo)</gco:CharacterString>
+                <gco:CharacterString>TIFF 300 dpi (115 Mo)</gco:CharacterString>
               </gmd:description>
             </gmd:CI_OnlineResource>
           </gmd:onLine>
@@ -350,7 +325,7 @@
       <gmd:lineage>
         <gmd:LI_Lineage>
           <gmd:statement>
-            <gco:CharacterString>Dessinée par la Société GEOTECHNIP, La Celle Saint-Cloud, France. Imprimé par l'Institut Géographique National. Fond topographique au 1/1200000 IGN assemblé.</gco:CharacterString>
+            <gco:CharacterString>Dressée par Ph. Vernet, J.L. Guillerm et P.H. Gouyon en 1976. Dessinée au CEPE par D. Lacombe. Fond topographique extrait des cartes IGN de St-Martin-De-Londres feuilles 1-2, 3-4, 5-6 et 7-8</gco:CharacterString>
           </gmd:statement>
         </gmd:LI_Lineage>
       </gmd:lineage>
