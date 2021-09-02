@@ -27,9 +27,9 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
         <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&amp;family=Poppins:wght@400&amp;display=swap" rel="stylesheet" /> 
 
-        <link rel="stylesheet" href="/dist/css/normalize.css" />
-        <link rel="stylesheet" href="/dist/css/skeleton.css" />
-        <link rel="stylesheet" href="/css/cyril.css" />
+        <link rel="stylesheet" href="../dist/css/normalize.css" />
+        <link rel="stylesheet" href="../dist/css/skeleton.css" />
+        <link rel="stylesheet" href="../css/cyril.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
         <link rel="icon" type="image/png" href="/dist/images/favicon.png"/>
@@ -108,13 +108,24 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
 
 
           <div class="row">
-
-            <div class="six columns">
+            <div class="eight columns">
               <h3>Mots clés</h3>
                 <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords"/>
             </div>
+            <div class="four columns">
+              <h3>Métadonnées format ISO 19139</h3>
+              <p>
+                <a>
+                  <xsl:attribute name="href">../metadata/<xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString"/>.xml</xsl:attribute>
+                  <xsl:attribute name="download" />
+                  <xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString"/>.xml
+                </a>
+              </p>
+            </div>
+          </div>
 
-            <div class="six columns">
+          <div class="row">
+            <div class="ten columns">
               <h3>Accès au téléchargement</h3>
                 <xsl:apply-templates select="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine"/>
                 <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[1]/gmd:CI_ResponsibleParty"/>
