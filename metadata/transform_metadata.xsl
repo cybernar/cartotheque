@@ -77,10 +77,7 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
 
               <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date"/>
 
-              <p>
-                <span class="element">Auteur(s)</span> 
-                <xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:credit/gco:CharacterString"/>
-              </p>
+              <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:credit"/>
 
               <xsl:apply-templates select="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement"/>
 
@@ -106,11 +103,23 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
             </div>
           </div>
 
-
           <div class="row">
             <div class="eight columns">
               <h3>Mots clés</h3>
                 <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords"/>
+            </div>
+            <div class="four columns">
+              <h3>Etendue</h3>
+                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent"/>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="eight columns">
+              <h3>Accès au téléchargement</h3>
+                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine"/>
+                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[1]/gmd:CI_ResponsibleParty"/>
+                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints"/>
             </div>
             <div class="four columns">
               <h3>Métadonnées format ISO 19139</h3>
@@ -121,15 +130,6 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
                   <xsl:value-of select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString"/>.xml
                 </a>
               </p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="ten columns">
-              <h3>Accès au téléchargement</h3>
-                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine"/>
-                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[1]/gmd:CI_ResponsibleParty"/>
-                <xsl:apply-templates select="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints"/>
             </div>
 
           </div>
@@ -150,12 +150,22 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
     <xsl:value-of select="substring(gmd:CI_Date/gmd:date/gco:Date,1,4)"/></p>
   </xsl:template>
 
+  <!-- Template AUTEUR -->
+  <xsl:template match="gmd:credit">
+    <p>
+      <span class="element">Auteur(s)</span>
+      <xsl:value-of select="gco:CharacterString" />
+    </p>
+  </xsl:template>
+
   <!-- Template REALISATION -->
   <xsl:template match="gmd:statement">
+    <xsl:if test="gco:CharacterString != ''">
     <p>
       <span class="element">Réalisation</span>
       <xsl:value-of select="gco:CharacterString" />
     </p>
+    </xsl:if>
   </xsl:template>
 
   <!-- Template MOTS CLES THESAURUS -->
@@ -176,6 +186,20 @@ xmlns:gml="http://www.opengis.net/gml/3.2">
   <!-- Template MOT CLE -->
   <xsl:template match="gmd:keyword">
     <span class="button"><xsl:value-of select="gco:CharacterString" /></span>
+  </xsl:template>
+
+  <!-- Template Etendue -->
+  <xsl:template match="gmd:extent">
+    <p>
+      <span class="element">O, E</span>
+      <xsl:value-of select="gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal" />,
+      <xsl:value-of select="gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal" />
+    </p>
+    <p>
+      <span class="element">S, N</span>
+      <xsl:value-of select="gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal" />,
+      <xsl:value-of select="gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal" />
+    </p>
   </xsl:template>
 
   <!-- Template LIEN -->
